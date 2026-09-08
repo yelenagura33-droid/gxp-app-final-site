@@ -61,7 +61,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href="mailto:info@gxpexcellence.ru"
-            className="hidden text-sm font-semibold text-brand-ink/70 transition-colors hover:text-brand-teal sm:inline-flex"
+            className="text-sm font-semibold text-brand-ink/70 transition-colors hover:text-brand-teal"
           >
             info@gxpexcellence.ru
           </a>
