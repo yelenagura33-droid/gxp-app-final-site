@@ -1,4 +1,4 @@
-import { Phone, MapPin, Send, BadgeCheck } from "lucide-react";
+import { Phone, MapPin, Send, BadgeCheck, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -46,6 +46,15 @@ export default function Footer() {
                 >
                   <Phone className="h-4 w-4 shrink-0 text-brand-teal" />
                   +7 (916) 546-44-00
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@gxpexcellence.ru"
+                  className="flex items-center gap-3 text-white/80 transition-colors hover:text-brand-teal"
+                >
+                  <Mail className="h-4 w-4 shrink-0 text-brand-teal" />
+                  info@gxpexcellence.ru
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/80">
