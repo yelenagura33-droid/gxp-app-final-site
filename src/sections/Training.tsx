@@ -23,7 +23,7 @@ export default function Training() {
   return (
     <section id="training" className="bg-white py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <Reveal className="relative order-2 lg:order-1">
+                <Reveal className="relative order-2 lg:order-1">
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-blue/15 to-brand-teal/20 blur-2xl" />
             <img
@@ -31,10 +31,15 @@ export default function Training() {
               alt="Протоколы валидации и соглашения по качеству"
               className="relative w-full rounded-[1.75rem] object-cover shadow-2xl shadow-brand-navy/20"
             />
-            <div className="absolute -bottom-5 left-6 rounded-2xl bg-brand-navy px-5 py-3.5 text-white shadow-xl">
+            <a
+              href="https://gxpconsulting.getcourse.ru/showcase"
+              target="_blank"
+              rel="noreferrer"
+              className="absolute -bottom-5 left-6 rounded-2xl bg-brand-navy px-5 py-3.5 text-white shadow-xl transition-transform hover:-translate-y-1 hover:shadow-2xl block"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">Платформа</p>
               <p className="text-lg font-extrabold">GetCourse</p>
-            </div>
+            </a>
           </div>
         </Reveal>
 
