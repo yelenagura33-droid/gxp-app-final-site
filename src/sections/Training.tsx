@@ -44,13 +44,18 @@ export default function Training() {
         </Reveal>
 
         <div className="order-1 lg:order-2">
-          <Reveal>
+                    <Reveal>
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-brand-teal">
               Обучение
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink sm:text-4xl">
+            <a
+              href="https://gxpconsulting.getcourse.ru/showcase"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 block text-3xl font-extrabold tracking-tight text-brand-ink sm:text-4xl transition-colors hover:text-brand-teal"
+            >
               Обучение на платформе GetCourse
-            </h2>
+            </a>
             <p className="mt-5 max-w-xl leading-relaxed text-brand-ink/65">
               Курсы и вебинары для специалистов качества, производства и IT-команд фармкомпаний.
               Записи, материалы и доступ к обновлениям — в удобном личном кабинете.
