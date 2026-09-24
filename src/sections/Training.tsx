@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, UserRound, Video, ArrowRight, Bot, Clock, FileCheck, Zap, Users } from "lucide-react";
 import Reveal from "../components/Reveal";
-import ChecklistForm from "../components/ChecklistForm";
 
 const FORMATS = [
   {
@@ -21,7 +20,6 @@ const FORMATS = [
   },
 ];
 
-/** Компонент таймера обратного отсчёта */
 function CountdownTimer({ targetDate }: { targetDate: Date }) {
   const [timeLeft, setTimeLeft] = useState(targetDate.getTime() - Date.now());
 
@@ -56,7 +54,6 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 }
 
 export default function Training() {
-  // Дата и время начала мастер-класса (11 октября 2026, 12:00)
   const masterclassDate = new Date("2026-10-11T12:00:00");
 
   const METRICS = [
@@ -124,10 +121,9 @@ export default function Training() {
             ))}
           </div>
 
-          {/* Анонс мастер-класса с таймером и цифрами */}
+          {/* Анонс мастер-класса с таймером */}
           <Reveal delay={300}>
             <div className="mt-10 rounded-3xl border-2 border-brand-teal/40 bg-gradient-to-br from-brand-teal/10 via-white to-brand-blue/10 p-6 shadow-xl shadow-brand-navy/10">
-              {/* Бейдж */}
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-teal to-brand-blue text-white">
                   <Bot className="h-5 w-5" />
@@ -139,30 +135,22 @@ export default function Training() {
                 </div>
               </div>
 
-              {/* Заголовок */}
               <h3 className="mt-4 text-xl font-extrabold leading-tight text-brand-ink sm:text-2xl">
                 От блокнота к дашборду: ИИ-ассистенты в аудите поставщиков стерильных лекарственных препаратов
               </h3>
 
-              {/* Цифры */}
               <div className="mt-5 grid grid-cols-2 gap-3">
                 {METRICS.map((m) => (
-                  <div
-                    key={m.label}
-                    className="rounded-xl bg-white/80 p-3 shadow-sm"
-                  >
+                  <div key={m.label} className="rounded-xl bg-white/80 p-3 shadow-sm">
                     <div className="flex items-center gap-1.5 text-brand-teal">
                       <m.icon className="h-3.5 w-3.5" />
                       <span className="text-sm font-extrabold">{m.value}</span>
                     </div>
-                    <p className="mt-1 text-[11px] leading-snug text-brand-ink/60">
-                      {m.label}
-                    </p>
+                    <p className="mt-1 text-[11px] leading-snug text-brand-ink/60">{m.label}</p>
                   </div>
                 ))}
               </div>
 
-              {/* Что внутри */}
               <div className="mt-5 space-y-2 text-sm leading-relaxed text-brand-ink/70">
                 <p>
                   <span className="font-bold text-brand-ink">Теория:</span> Приложение 22 GMP (EU) об ИИ, специфика аудитов в чистых помещениях класса А/В, обзор инструментов (Copilot, Speech Service, Document Analyzer).
@@ -172,7 +160,6 @@ export default function Training() {
                 </p>
               </div>
 
-              {/* Таймер */}
               <div className="mt-5 flex flex-wrap items-center gap-3 rounded-xl bg-brand-navy px-4 py-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
                   До старта:
@@ -180,7 +167,6 @@ export default function Training() {
                 <CountdownTimer targetDate={masterclassDate} />
               </div>
 
-              {/* Кнопка */}
               <a
                 href="https://gxpconsulting.getcourse.ru/showcase"
                 target="_blank"
@@ -190,13 +176,6 @@ export default function Training() {
                 Перейти к мастер-классу
                 <ArrowRight className="h-4 w-4" />
               </a>
-            </div>
-          </Reveal>
-
-          {/* Форма для скачивания чек-листа */}
-          <Reveal delay={340}>
-            <div className="mt-12">
-              <ChecklistForm />
             </div>
           </Reveal>
 
