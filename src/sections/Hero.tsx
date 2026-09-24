@@ -1,5 +1,6 @@
 import { ArrowRight, Send, ShieldCheck, FileCheck2 } from "lucide-react";
 import Reveal from "../components/Reveal";
+import HeroChecklistForm from "../components/HeroChecklistForm";
 
 const CHIPS = ["GMP EAEU", "EudraLex Vol. 4", "ICH", "WHO", "PIC/S", "GAMP 5"];
 
@@ -7,7 +8,8 @@ export default function Hero() {
   return (
     <section id="top" className="hero-mesh relative overflow-hidden pt-28 lg:pt-36">
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28">
+      <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-5 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28">
+        {/* ЛЕВАЯ КОЛОНКА: текст + форма чек-листа */}
         <div>
           <Reveal>
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-teal/25 bg-white/70 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-tealdeep">
@@ -49,7 +51,7 @@ export default function Hero() {
             </div>
           </Reveal>
           <Reveal delay={320}>
-            <div className="mt-10 flex flex-wrap gap-2">
+            <div className="mt-8 flex flex-wrap gap-2">
               {CHIPS.map((chip) => (
                 <span
                   key={chip}
@@ -60,8 +62,16 @@ export default function Hero() {
               ))}
             </div>
           </Reveal>
+
+          {/* Форма чек-листа под текстом и кнопками */}
+          <Reveal delay={400}>
+            <div className="mt-8 max-w-md">
+              <HeroChecklistForm />
+            </div>
+          </Reveal>
         </div>
 
+        {/* ПРАВАЯ КОЛОНКА: фото с бейджами */}
         <Reveal delay={200} className="relative">
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-teal/25 to-brand-blue/25 blur-2xl" />
