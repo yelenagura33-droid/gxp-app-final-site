@@ -143,9 +143,6 @@ export default function Training() {
               <h3 className="mt-4 text-xl font-extrabold leading-tight text-brand-ink sm:text-2xl">
                 От блокнота к дашборду: ИИ-ассистенты в аудите поставщиков стерильных лекарственных препаратов
               </h3>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-brand-teal">
-                По материалам проекта «SmartAudit» · Конкурс GxP-Профи 2025
-              </p>
 
               {/* Цифры */}
               <div className="mt-5 grid grid-cols-2 gap-3">
