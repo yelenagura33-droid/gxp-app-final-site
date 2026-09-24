@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GraduationCap, UserRound, Video, ArrowRight, Bot, Clock, FileCheck, Zap, Users } from "lucide-react";
 import Reveal from "../components/Reveal";
+import VideoTeaser from "../components/VideoTeaser";
 
 const FORMATS = [
   {
@@ -121,7 +122,7 @@ export default function Training() {
             ))}
           </div>
 
-          {/* Анонс мастер-класса с таймером */}
+          {/* Анонс мастер-класса с тизером и таймером */}
           <Reveal delay={300}>
             <div className="mt-10 rounded-3xl border-2 border-brand-teal/40 bg-gradient-to-br from-brand-teal/10 via-white to-brand-blue/10 p-6 shadow-xl shadow-brand-navy/10">
               <div className="flex items-center gap-3">
@@ -133,6 +134,11 @@ export default function Training() {
                     Онлайн-мастер-класс
                   </span>
                 </div>
+              </div>
+
+              {/* 👇 ВИДЕО-ТИЗЕР 👇 */}
+              <div className="mt-4">
+                <VideoTeaser />
               </div>
 
               <h3 className="mt-4 text-xl font-extrabold leading-tight text-brand-ink sm:text-2xl">
